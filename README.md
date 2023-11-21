@@ -1,22 +1,26 @@
-# Frontend Mentor - E-commerce product page
+# Frontend Mentor - E-commerce product page solution
 
-![Design preview for the E-commerce product page coding challenge](./design/desktop-preview.jpg)
+This is a solution to the [E-commerce product page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/ecommerce-product-page-UPsZ9MJp6). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
-## Welcome! 👋
+## Table of contents
 
-Thanks for checking out this front-end coding challenge.
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
+- [Acknowledgments](#acknowledgments)
 
-[Frontend Mentor](https://www.frontendmentor.io) challenges help you improve your coding skills by building realistic projects.
+## Overview
 
-**To do this challenge, you need a good understanding of HTML, CSS and JavaScript.**
+### The challenge
 
-## The challenge
-
-Your challenge is to build out this e-commerce product page and get it looking as close to the design as possible.
-
-You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
-
-Your users should be able to:
+Users should be able to:
 
 - View the optimal layout for the site depending on their device's screen size
 - See hover states for all interactive elements on the page
@@ -25,72 +29,307 @@ Your users should be able to:
 - Add items to the cart
 - View the cart and remove items from it
 
-Want some support on the challenge? [Join our Slack community](https://www.frontendmentor.io/slack) and ask questions in the **#help** channel.
+### Screenshot
 
-## Where to find everything
+![Solution Image](./solution.jpg)
 
-Your task is to build out the project to the designs inside the `/design` folder. You will find both a mobile and a desktop version of the design.
+Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
 
-The designs are in JPG static format. Using JPGs will mean that you'll need to use your best judgment for styles such as `font-size`, `padding` and `margin`.
+Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it.
 
-If you would like the design files (we provide Sketch & Figma versions) to inspect the design in more detail, you can [subscribe as a PRO member](https://www.frontendmentor.io/pro).
+Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
 
-You will find all the required assets in the `/images` folder. The assets are already optimized.
+### Links
 
-There is also a `style-guide.md` file containing the information you'll need, such as color palette and fonts.
+- Solution URL: [Github](https://github.com/byNico1/frontendmentor-ecommerce)
+- Live Site URL: [live site URL](https://bynico1.github.io/frontendmentor-ecommerce/)
 
-## Building your project
+## My process
 
-Feel free to use any workflow that you feel comfortable with. Below is a suggested process, but do not feel like you need to follow these steps:
+### Built with
 
-1. Initialize your project as a public repository on [GitHub](https://github.com/). Creating a repo will make it easier to share your code with the community if you need help. If you're not sure how to do this, [have a read-through of this Try Git resource](https://try.github.io/).
-2. Configure your repository to publish your code to a web address. This will also be useful if you need some help during a challenge as you can share the URL for your project with your repo URL. There are a number of ways to do this, and we provide some recommendations below.
-3. Look through the designs to start planning out how you'll tackle the project. This step is crucial to help you think ahead for CSS classes to create reusable styles.
-4. Before adding any styles, structure your content with HTML. Writing your HTML first can help focus your attention on creating well-structured content.
-5. Write out the base styles for your project, including general content styles, such as `font-family` and `font-size`.
-6. Start adding styles to the top of the page and work down. Only move on to the next section once you're happy you've completed the area you're working on.
+- Semantic HTML5 markup
+- Flexbox
+- Mobile-first workflow
 
-## Deploying your project
+### What I learned
 
-As mentioned above, there are many ways to host your project for free. Our recommend hosts are:
+```html
+<section class="wrapper">
+  <div class="card-wrapper">
+    <div class="card">
+      <div class="product-imgs">
+        <div class="img-display">
+          <button
+            class="hero__button hero__button--max-desktop hero__button--left left-arrow"
+            id="left"
+          >
+            <svg
+              width="12"
+              height="18"
+              xmlns="http://www.w3.org/2000/svg"
+              id="left"
+            >
+              <path
+                d="M11 1 3 9l8 8"
+                stroke="#1D2026"
+                stroke-width="3"
+                fill="none"
+                fill-rule="evenodd"
+                id="left"
+              />
+            </svg>
+          </button>
 
-- [GitHub Pages](https://pages.github.com/)
-- [Vercel](https://vercel.com/)
-- [Netlify](https://www.netlify.com/)
+          <div class="img-showcase">
+            <img
+              class="carousel__image big-image product-img"
+              src="./images/image-product-1.jpg"
+              alt=""
+            />
+            <img
+              class="carousel__image big-image product-img"
+              src="./images/image-product-2.jpg"
+              alt=""
+            />
+            <img
+              class="carousel__image big-image product-img"
+              src="./images/image-product-3.jpg"
+              alt=""
+            />
+            <img
+              class="carousel__image big-image product-img"
+              src="./images/image-product-4.jpg"
+              alt=""
+            />
+          </div>
 
-You can host your site using one of these solutions or any of our other trusted providers. [Read more about our recommended and trusted hosts](https://medium.com/frontend-mentor/frontend-mentor-trusted-hosting-providers-bf000dfebe).
+          <button
+            class="hero__button hero__button--max-desktop hero__button--right right-arrow"
+            id="right"
+          >
+            <svg
+              width="13"
+              height="18"
+              xmlns="http://www.w3.org/2000/svg"
+              id="right"
+            >
+              <path
+                d="m2 1 8 8-8 8"
+                stroke="#1D2026"
+                stroke-width="3"
+                fill="none"
+                fill-rule="evenodd"
+                id="right"
+              />
+            </svg>
+          </button>
+        </div>
+        <div class="img-select">
+          <div class="img-item">
+            <a href="#" data-id="1">
+              <img
+                class="product-img"
+                src="./images/image-product-1.jpg"
+                alt=""
+              />
+            </a>
+          </div>
+          <div class="img-item">
+            <a href="#" data-id="2">
+              <img
+                class="product-img"
+                src="./images/image-product-2.jpg"
+                alt=""
+              />
+            </a>
+          </div>
+          <div class="img-item">
+            <a href="#" data-id="3">
+              <img
+                class="product-img"
+                src="./images/image-product-3.jpg"
+                alt=""
+              />
+            </a>
+          </div>
+          <div class="img-item">
+            <a href="#" data-id="4">
+              <img
+                class="product-img"
+                src="./images/image-product-4.jpg"
+                alt=""
+              />
+            </a>
+          </div>
+        </div>
+      </div>
 
-## Create a custom `README.md`
+      <div class="container info-product">
+        <p class="product-category">Sneaker Company</p>
+        <h1 class="product__name">Fall Limited Edition Sneakers</h1>
+        <p class="description">
+          These low-profile sneakers are your perfect casual wear companion.
+          Featuring a durable rubber outer sole, they’ll withstand everything
+          the weather can offer.
+        </p>
+        <div class="price-container">
+          <p class="price">$125.00 <span class="discount">50%</span></p>
+          <p class="price-with-discount">$250.00</p>
+        </div>
+        <div class="cta">
+          <div class="cta__products">
+            <button class="button-products-number">
+              <img src="./images/icon-minus.svg" id="minus" alt="" />
+            </button>
+            <p class="items item-counter"></p>
+            <button class="button-products-number">
+              <img src="./images/icon-plus.svg" id="plus" alt="" />
+            </button>
+          </div>
+          <button class="cta__button">
+            <img
+              class="cta__cart-image"
+              width="15"
+              height="15"
+              src="./images/icon-cart.svg"
+              alt=""
+            />
+            Add to cart
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+```
 
-We strongly recommend overwriting this `README.md` with a custom one. We've provided a template inside the [`README-template.md`](./README-template.md) file in this starter code.
+```js
+let currentIndex = 0;
+let prevIndex;
 
-The template provides a guide for what to add. A custom `README` will help you explain your project and reflect on your learnings. Please feel free to edit our template as much as you like.
+const imageWidth = firstImg.clientWidth;
+const secondImageWidth = secondImg.clientWidth;
 
-Once you've added your information to the template, delete this file and rename the `README-template.md` file to `README.md`. That will make it show up as your repository's README file.
+rightArrow.forEach((arrow) =>
+  arrow.addEventListener("click", () => {
+    if (arrow.id === "right-modal") {
+      carouselModal.classList.add("sliding-transition");
 
-## Submitting your solution
+      prevIndex = currentIndex;
+      currentIndex = (currentIndex + 1) % modalTotalImages;
 
-Submit your solution on the platform for the rest of the community to see. Follow our ["Complete guide to submitting solutions"](https://medium.com/frontend-mentor/a-complete-guide-to-submitting-solutions-on-frontend-mentor-ac6384162248) for tips on how to do this.
+      carouselModal.style.transform = `translateX(-${secondImageWidth}px)`;
 
-Remember, if you're looking for feedback on your solution, be sure to ask questions when submitting it. The more specific and detailed you are with your questions, the higher the chance you'll get valuable feedback from the community.
+      carouselModal.appendChild(modalImages[prevIndex]);
+      carouselModal.classList.remove("sliding-transition");
+      carouselModal.style.transform = "";
+      return;
+    }
+    carousel.classList.add("sliding-transition");
 
-## Sharing your solution
+    prevIndex = currentIndex;
+    currentIndex = (currentIndex + 1) % totalImages;
 
-There are multiple places you can share your solution:
+    carousel.style.transform = `translateX(-${imageWidth}px)`;
 
-1. Share your solution page in the **#finished-projects** channel of the [Slack community](https://www.frontendmentor.io/slack). 
-2. Tweet [@frontendmentor](https://twitter.com/frontendmentor) and mention **@frontendmentor**, including the repo and live URLs in the tweet. We'd love to take a look at what you've built and help share it around.
-3. Share your solution on other social channels like LinkedIn.
-4. Blog about your experience building your project. Writing about your workflow, technical choices, and talking through your code is a brilliant way to reinforce what you've learned. Great platforms to write on are [dev.to](https://dev.to/), [Hashnode](https://hashnode.com/), and [CodeNewbie](https://community.codenewbie.org/).
+    carousel.appendChild(images[prevIndex]);
+    carousel.classList.remove("sliding-transition");
+    carousel.style.transform = "";
+  })
+);
 
-We provide templates to help you share your solution once you've submitted it on the platform. Please do edit them and include specific questions when you're looking for feedback. 
+leftArrow.forEach((arrow) =>
+  arrow.addEventListener("click", () => {
+    if (arrow.id === "left-modal") {
+      prevIndex = currentIndex;
+      currentIndex = (currentIndex - 1 + modalTotalImages) % modalTotalImages;
 
-The more specific you are with your questions the more likely it is that another member of the community will give you feedback.
+      // Move Carousel to the left by one image, and insert the image at currentIndex at the beginning of carousel's DOM
+      carouselModal.style.transform = `translateX(-${secondImageWidth}px)`;
+      carouselModal.insertBefore(
+        modalImages[currentIndex],
+        carouselModal.firstChild
+      );
 
-## Got feedback for us?
+      // Now, let's start the transition effect, from -520 px to 0 px.
+      carouselModal.style.transform = "";
+      carouselModal.classList.add("sliding-transition");
 
-We love receiving feedback! We're always looking to improve our challenges and our platform. So if you have anything you'd like to mention, please email hi[at]frontendmentor[dot]io.
+      carouselModal.classList.remove("sliding-transition");
+      return;
+    }
+    prevIndex = currentIndex;
+    currentIndex = (currentIndex - 1 + totalImages) % totalImages;
 
-This challenge is completely free. Please share it with anyone who will find it useful for practice.
+    // Move Carousel to the left by one image, and insert the image at currentIndex at the beginning of carousel's DOM
+    carousel.style.transform = `translateX(-${imageWidth}px)`;
+    carousel.insertBefore(images[currentIndex], carousel.firstChild);
 
-**Have fun building!** 🚀
+    // Now, let's start the transition effect, from -520 px to 0 px.
+    carousel.style.transform = "";
+    carousel.classList.add("sliding-transition");
+
+    // By removing the transition class, we ensure that the transition only occurs when we want it to and that we have full control over the carousel's movement.
+    carousel.classList.remove("sliding-transition");
+  })
+);
+
+// Desktop Img slider
+
+const imgs = document.querySelectorAll(".img-select a");
+const imgBtns = [...imgs];
+let imgId = 1;
+
+imgBtns.forEach((imgItem) => {
+  imgItem.addEventListener("click", (event) => {
+    event.preventDefault();
+    if (imgId !== imgItem.dataset.id) {
+      document.querySelectorAll(`a[data-id="${imgId}"]`).forEach((selector) => {
+        selector.parentNode.classList.remove("selected");
+        selector.style.opacity = 1;
+      });
+      imgItem.parentNode.classList.add("selected");
+      imgItem.style.opacity = 0.3;
+    }
+
+    imgId = imgItem.dataset.id;
+    if (imgItem.dataset.slider === "2") {
+      slideImage2();
+      return;
+    }
+    slideImage();
+  });
+});
+
+function slideImage() {
+  const displayWidth = document.querySelector(
+    ".img-showcase img:first-child"
+  ).clientWidth;
+
+  document.querySelector(".img-showcase").style.transform = `translateX(${
+    -(imgId - 1) * displayWidth
+  }px)`;
+}
+
+function slideImage2() {
+  const displayWidth = document.querySelector(
+    ".img-showcase-2 img:first-child"
+  ).clientWidth;
+
+  document
+    .querySelectorAll(".img-showcase-2")
+    .forEach(
+      (el) =>
+        (el.style.transform = `translateX(${-(imgId - 1) * displayWidth}px)`)
+    );
+}
+```
+
+### Continued development
+
+I really need to improve my JavaScript code I think using a framework would be much better
+
+## Author
+
+- Frontend Mentor - [@bynico1](https://www.frontendmentor.io/profile/byNico1)
