@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | E-commerce product page</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <div class="container nav-container">
+      <div class="nav-content">
+        <div>
+          <div class="inline-block">
+            <img class="mobile-menu" src="./images/icon-menu.svg" alt="">
+          </div>
+          <p class="logo inline-block">sneakers</p>
+        </div>
+
+        <ul class="nav-list">
+          <li class="">Collections</li>
+          <li class="">Men</li>
+          <li class="">Women</li>
+          <li class="">About</li>
+          <li class="">Contact</li>
+        </ul>
+      </div>
+      <div class="right">
+        <div class="nav__cart-container">
+          <img style="cursor: pointer;" class="inline-block" src="./images/icon-cart.svg" alt="cart" width="25"
+            height="25">
+          <p class="cart-items"></p>
+        </div>
+        <img class="inline-block ml-20 avatar" src="./images/image-avatar.png" alt="avatar" width="30" height="30">
+      </div>
+
+    </div>
+  </nav>
+
+  <div class="cart-modal hidden ">
+    <h3>Cart</h3>
+    <div class="modal-break"></div>
+
+    <p class="empty-message hidden">Your cart is empty.</p>
+
+    <div class="modal-content">
+      <img src="./images/image-product-1-thumbnail.jpg" width="50" height="50" alt="">
+      <div class="modal-text">
+        <span>Fall Limited Edition Sneakers</span>
+        <p class="modal-price">$125.00 x <span class="modal__products-number"></span> <span
+            class="modal__products-price"></span></p>
+
+      </div>
+      <img class="modal-delete" src="./images/icon-delete.svg" alt="">
+    </div>
+    <button class="modal-cta__button">
+      Checkout
+    </button>
+  </div>
+
+  <section class="menu-container hidden ">
+    <div class="menu">
+      <div class="container">
+        <img class="close-menu mobile-menu" src="./images/icon-close.svg" alt="">
+        <ul class="menu-list">
+          <li><a href="#">Collections</a></li>
+          <li><a href="#">Men</a></li>
+          <li><a href="#">Women</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <section class="wrapper">
+      <div class="card-wrapper">
+        <div class="card">
+          <!-- card left -->
+          <div class="product-imgs">
+            <div class="img-display">
+              <button class="hero__button hero__button--max-desktop hero__button--left left-arrow" id="left">
+                <svg width="12" height="18" xmlns="http://www.w3.org/2000/svg" id="left">
+                  <path d="M11 1 3 9l8 8" stroke="#1D2026" stroke-width="3" fill="none" fill-rule="evenodd" id="left" />
+                </svg>
+              </button>
+
+              <div class="img-showcase">
+                <img class="carousel__image big-image product-img" src="./images/image-product-1.jpg" alt="">
+                <img class="carousel__image big-image product-img" src="./images/image-product-2.jpg" alt="">
+                <img class="carousel__image big-image product-img" src="./images/image-product-3.jpg" alt="">
+                <img class="carousel__image big-image product-img" src="./images/image-product-4.jpg" alt="">
+              </div>
+
+              <button class="hero__button hero__button--max-desktop hero__button--right right-arrow" id="right">
+                <svg width="13" height="18" xmlns="http://www.w3.org/2000/svg" id="right">
+                  <path d="m2 1 8 8-8 8" stroke="#1D2026" stroke-width="3" fill="none" fill-rule="evenodd" id="right" />
+                </svg>
+              </button>
+            </div>
+            <div class="img-select">
+              <div class="img-item">
+                <a href="#" data-id="1">
+                  <img class="product-img" src="./images/image-product-1.jpg" alt="">
+                </a>
+              </div>
+              <div class="img-item">
+                <a href="#" data-id="2">
+                  <img class="product-img" src="./images/image-product-2.jpg" alt="">
+                </a>
+              </div>
+              <div class="img-item">
+                <a href="#" data-id="3">
+                  <img class="product-img" src="./images/image-product-3.jpg" alt="">
+                </a>
+              </div>
+              <div class="img-item">
+                <a href="#" data-id="4">
+                  <img class="product-img" src="./images/image-product-4.jpg" alt="">
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right info Desktop -->
+
+          <div class="container info-product">
+            <p class="product-category">Sneaker Company</p>
+            <h1 class="product__name">Fall Limited Edition Sneakers</h1>
+            <p class="description">
+              These low-profile sneakers are your perfect casual wear companion. Featuring a
+              durable rubber outer sole, they’ll withstand everything the weather can offer.
+            </p>
+            <div class="price-container">
+              <p class="price">$125.00 <span class="discount">50%</span></p>
+              <p class="price-with-discount">$250.00</p>
+            </div>
+            <div class="cta">
+              <div class="cta__products">
+                <button class="button-products-number"><img src="./images/icon-minus.svg" id="minus" alt=""></button>
+                <p class="items item-counter"></p>
+                <button class="button-products-number"><img src="./images/icon-plus.svg" id="plus" alt=""></button>
+              </div>
+              <button class="cta__button">
+                <img class="cta__cart-image" width="15" height="15" src="./images/icon-cart.svg" alt="">
+                Add to cart
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <!-- <div class="carousel">
+        <img class="carousel__image" src="./images/image-product-1.jpg" alt="">
+        <img class="carousel__image" src="./images/image-product-2.jpg" alt="">
+        <img class="carousel__image" src="./images/image-product-3.jpg" alt="">
+        <img class="carousel__image" src="./images/image-product-4.jpg" alt="">
+      </div> -->
+
+
+    </section>
+
+    <div class="second-img-wrapper hidden">
+      <div class="wrapper mt-mid">
+        <div class="modal-card-wrapper">
+          <div class="close-modal-container">
+            <button class="close__btn">
+              <img src="./images/icon-close.svg" width="20" alt="">
+            </button>
+          </div>
+          <div class="product-imgs">
+            <button class="hero__button hero__button--left-modal left-arrow" id="left-modal">
+              <svg width="12" height="18" xmlns="http://www.w3.org/2000/svg" id="left">
+                <path d="M11 1 3 9l8 8" stroke="#1D2026" stroke-width="3" fill="none" fill-rule="evenodd" id="left" />
+              </svg>
+            </button>
+            <div class="img-display">
+              <div class="img-showcase img-showcase-2">
+                <img class=" carousel__image-modal product-img" src="./images/image-product-1.jpg" alt="">
+                <img class=" carousel__image-modal product-img" src="./images/image-product-2.jpg" alt="">
+                <img class=" carousel__image-modal product-img" src="./images/image-product-3.jpg" alt="">
+                <img class=" carousel__image-modal product-img" src="./images/image-product-4.jpg" alt="">
+              </div>
+            </div>
+            <div class="img-select">
+              <div class="img-item">
+                <div class="bg-wrapper">
+                  <a href="#" data-id="1" data-slider="2">
+                    <img class="product-img" src="./images/image-product-1.jpg" alt="">
+                  </a>
+                </div>
+              </div>
+              <div class="img-item">
+                <div class="bg-wrapper">
+                  <a href="#" data-id="2" data-slider="2">
+                    <img class="product-img" src="./images/image-product-2.jpg" alt="">
+                  </a>
+                </div>
+              </div>
+              <div class="img-item">
+                <div class="bg-wrapper">
+                  <a href="#" data-id="3" data-slider="2">
+                    <img class="product-img" src="./images/image-product-3.jpg" alt="">
+                  </a>
+                </div>
+              </div>
+              <div class="img-item">
+                <div class="bg-wrapper">
+                  <a href="#" data-id="4" data-slider="2">
+                    <img class="product-img" src="./images/image-product-4.jpg" alt="">
+                  </a>
+                </div>
+              </div>
+            </div>
+            <button class="hero__button hero__button--right-modal right-arrow" id="right-modal">
+              <svg width="13" height="18" xmlns="http://www.w3.org/2000/svg" id="right">
+                <path d="m2 1 8 8-8 8" stroke="#1D2026" stroke-width="3" fill="none" fill-rule="evenodd" id="right" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="https://www.frontendmentor.io/profile/byNico1">Nicolas Forero</a>.
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+
+</html>
